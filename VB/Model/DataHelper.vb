@@ -14,13 +14,10 @@ Namespace WpfApplication
 	End Class
 
 	Public Class GridItem
-'INSTANT VB NOTE: The variable date was renamed since Visual Basic does not handle local variables named the same as class members well:
-'INSTANT VB NOTE: The variable name was renamed since Visual Basic does not handle local variables named the same as class members well:
-'INSTANT VB NOTE: The variable iD was renamed since Visual Basic does not handle local variables named the same as class members well:
-		Public Sub New(ByVal date_Renamed As DateTime, ByVal name_Renamed As String, ByVal iD_Renamed As Integer)
-			Me.Date = date_Renamed
-			Me.Name = name_Renamed
-			Me.ID = iD_Renamed
+		Public Sub New(ByVal [date] As DateTime, ByVal name As String, ByVal iD As Integer)
+			Me.Date = [date]
+			Me.Name = name
+			Me.ID = iD
 		End Sub
 
 		Public Property [Date]() As DateTime

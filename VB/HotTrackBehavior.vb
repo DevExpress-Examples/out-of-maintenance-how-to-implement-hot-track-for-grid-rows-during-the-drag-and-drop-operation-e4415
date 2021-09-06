@@ -1,4 +1,5 @@
-﻿Imports DevExpress.Mvvm.UI.Interactivity
+﻿Imports System
+Imports DevExpress.Mvvm.UI.Interactivity
 Imports DevExpress.Xpf.Grid
 Imports System.Windows
 
@@ -7,7 +8,7 @@ Namespace WpfApplication
 		Inherits Behavior(Of TableView)
 
 		Public Shared Function GetHotTrackedRowHandle(ByVal obj As DependencyObject) As Integer
-			Return DirectCast(obj.GetValue(HotTrackedRowHandleProperty), Integer)
+			Return CInt(Math.Truncate(obj.GetValue(HotTrackedRowHandleProperty)))
 		End Function
 
 		Public Shared Sub SetHotTrackedRowHandle(ByVal obj As DependencyObject, ByVal value As Integer)
